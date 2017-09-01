@@ -41,18 +41,6 @@ int hide()
 	return 0;
 }
 
-int easteregg()
-{
-	printf("U R BAKA \n");
-	for (int baka = 1; baka <= 9; baka++)
-	{
-		printf("⑨⑨⑨⑨⑨⑨⑨⑨⑨\n");
-	}
-	ShellExecute(0, 0, L"http://www.github.com/alforeplay/Touhou_ScoreOrEncrypt", 0, 0, SW_SHOW);
-
-	return 0;
-}
-
 int main()
 {
 	char input[4] = ""; 
@@ -61,7 +49,6 @@ int main()
 	char password_1[4] = "C++";
 	//비밀번호
 	char password_2[4] = "C--";
-	char easteregg_cmd[4] = "999";
 
 	printf("3자리 비밀번호를 입력하세요 : ");
 	//비밀번호를 입력하세요 라고 표시
@@ -82,11 +69,8 @@ int main()
 	{
 		hide();
 	}
-	else if (strcmp(input, easteregg_cmd) == 0)
+	else
 	{
-		easteregg();
-	}
-	else {
 		printf("비밀번호 (%s) 가 아닙니다\n", input);
 		//비밀번호가 아니라고 표시하고
 		main();
